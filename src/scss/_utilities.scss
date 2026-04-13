@@ -29,6 +29,16 @@
   // TODO: check figma for color
   color: variables.$neutral-400;
 }
+
+.badge {
+  // TODO: check figma for font, etc.
+  @include fonts.textpreset7;
+  border: 1px solid currentColor;
+  border-radius: variables.$cornerradius-full;
+  padding: 0 variables.$spacing-100;
+  text-transform: uppercase;
+}
+
 .btn {
   @include fonts.textpreset5;
   align-items: center;
