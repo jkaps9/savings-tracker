@@ -149,6 +149,23 @@
   display: flex;
 }
 
+.progress-bar {
+  // TODO: check figma for colors, spacing, radius, etc.
+  background-color: variables.$neutral-700;
+  border-radius: variables.$cornerradius-16;
+  height: variables.$spacing-200;
+  position: relative;
+  z-index: 1;
+
+  &__completion {
+    background-color: var(--primary-color);
+    border-radius: variables.$cornerradius-16;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
