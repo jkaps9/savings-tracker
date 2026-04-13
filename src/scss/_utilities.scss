@@ -1,10 +1,6 @@
 @use "fonts";
 @use "variables";
 
-section {
-  padding: var(--section-spacing) 0;
-}
-
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
