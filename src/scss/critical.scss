@@ -60,3 +60,22 @@ main {
     }
   }
 }
+
+@media (min-width: 48rem) {
+  .hero > .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    .card:first-child {
+      grid-column: 1 / span 2;
+    }
+
+    .card:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero > .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
