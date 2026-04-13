@@ -35,5 +35,20 @@ section {
   &--primary {
     background-color: var(--primary-color);
     color: var(--text-color-dark);
+
+    svg * {
+      stroke: var(--text-color-dark);
+    }
+
+    &:hover {
+      background-color: variables.$orange-500;
+    }
+
+    &:focus {
+      background-color: var(--primary-color);
+      box-shadow:
+        0 0 0 2px variables.$neutral-900,
+        0 0 0 4px var(--primary-color);
+    }
   }
 }
