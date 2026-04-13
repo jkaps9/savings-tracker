@@ -24,7 +24,7 @@ section {
 .btn {
   @include fonts.textpreset5;
   align-items: center;
-  border: none;
+  border: 1px solid transparent;
   border-radius: variables.$cornerradius-full;
   cursor: pointer;
   display: inline-flex;
@@ -46,6 +46,27 @@ section {
 
     &:focus {
       background-color: var(--primary-color);
+      box-shadow:
+        0 0 0 2px variables.$neutral-900,
+        0 0 0 4px var(--primary-color);
+    }
+  }
+
+  &--secondary {
+    background-color: variables.$neutral-800;
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    svg * {
+      stroke: var(--text-color);
+    }
+
+    &:hover {
+      background-color: variables.$neutral-700;
+    }
+
+    &:focus {
+      background-color: variables.$neutral-800;
       box-shadow:
         0 0 0 2px variables.$neutral-900,
         0 0 0 4px var(--primary-color);
