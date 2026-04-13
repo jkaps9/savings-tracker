@@ -119,6 +119,18 @@ select {
   color: var(--accent-color);
 }
 
+.primary-text {
+  color: var(--primary-color);
+}
+
+.large-text {
+  font-size: 44px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
 .btn {
   font-size: 16px;
   font-family: Inter, sans-serif;
@@ -185,6 +197,30 @@ select {
   box-shadow: 0 0 0 2px #101010, 0 0 0 4px var(--primary-color);
 }
 
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+}
+
+.bg-gradient {
+  background: linear-gradient(270deg, var(--primary-color) 0.35%, #b92b09 99.65%);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 48rem) {
+  .large-text {
+    font-size: 64px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+}
 :root {
   --primary-color: #ff5722;
   --accent-color: #4ade80;
@@ -192,7 +228,7 @@ select {
   --text-color: #ffffff;
   --text-color-dark: #101010;
   --border-color: #3c3b40;
-  --card-bg: #313131;
+  --card-bg: #1f1f1f;
   --container-max-width: 90rem;
   --container-width: 90%;
   --card-padding: 1.5rem 2rem;
@@ -205,6 +241,14 @@ body {
   background-color: var(--bg-color);
 }
 
+h3 {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+
 header {
   padding: 16px 0;
 }
@@ -213,4 +257,9 @@ main {
   display: grid;
   gap: 32px;
   margin: 48px 0;
+}
+
+.hero > .container {
+  display: grid;
+  gap: clamp(16px, 0.5229rem + 2.0356vw, 24px);
 }
