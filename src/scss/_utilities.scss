@@ -129,7 +129,7 @@
     align-items: center;
     display: flex;
     // TODO: check figma for gap
-    gap: variables.$spacing-200;
+    gap: variables.$spacing-100;
   }
 }
 
@@ -137,8 +137,8 @@
   // TODO: check figma for color and size
   background-color: variables.$neutral-400;
   border-radius: variables.$cornerradius-full;
-  height: 8px;
-  width: 8px;
+  height: 4px;
+  width: 4px;
 }
 
 .bg-gradient {
