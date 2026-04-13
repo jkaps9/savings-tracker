@@ -3,10 +3,17 @@
     <div class="navbar row">
       <a
         href="{{ '/' | url }}"
-        class="logo"
+        class="logo hide-on-mobile"
         aria-label="{{ data.siteName }} - home"
       >
         {% include "svgs/logo-large.svg" %}
+      </a>
+      <a
+        href="{{ '/' | url }}"
+        class="logo show-on-mobile"
+        aria-label="{{ data.siteName }} - home"
+      >
+        {% include "svgs/logo-small.svg" %}
       </a>
       <button
         id="addGoal"

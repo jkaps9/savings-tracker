@@ -141,8 +141,24 @@
   gap: variables.$spacing-100;
 }
 
+.hide-on-mobile {
+  display: none;
+}
+
+.show-on-mobile {
+  display: flex;
+}
+
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
+  }
+
+  .hide-on-mobile {
+    display: flex;
+  }
+
+  .show-on-mobile {
+    display: none;
   }
 }
