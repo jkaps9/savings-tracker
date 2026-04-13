@@ -43,13 +43,6 @@ main {
 }
 
 .hero > .container {
-  display: grid;
-  gap: clamp(
-    variables.$spacing-200,
-    0.5229rem + 2.0356vw,
-    variables.$spacing-300
-  );
-
   .chart {
     width: 100%;
   }

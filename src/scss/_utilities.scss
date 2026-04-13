@@ -125,6 +125,14 @@
   border-color: variables.$whitealpha-30;
 }
 
+.card-container {
+  display: grid;
+  gap: clamp(
+    variables.$spacing-200,
+    0.5229rem + 2.0356vw,
+    variables.$spacing-300
+  );
+}
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
