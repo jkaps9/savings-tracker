@@ -56,9 +56,63 @@
     </div>
     <div class="card">
       <h3>Monthly deposits</h3>
+      <div class="chart">
+        <canvas id="chart"></canvas>
+      </div>
     </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Hero Bar Chart
+  const ctx = document.getElementById("chart");
+
+  const data = {
+    labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
+    datasets: [
+      {
+        data: [400, 1150, 1149, 1550, 1950, 1025],
+        backgroundColor: ["#FF5722"],
+        borderColor: ["rgba(255, 255, 255, 0.30)"],
+        borderRadius: 8,
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const config = {
+    type: "bar",
+    data: data,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          display: false,
+        },
+        x: {
+          ticks: {
+            display: true,
+            color: "#ffffff",
+            font: {
+              family: "Inter",
+              lineHeight: 1.2,
+              size: 11,
+              weight: 600,
+            },
+          },
+        },
+      },
+    },
+  };
+
+  new Chart(ctx, config);
+</script>
 
 </main>
     <script src="/savings-tracker/main.js"></script>

@@ -263,3 +263,6 @@ main {
   display: grid;
   gap: clamp(16px, 0.5229rem + 2.0356vw, 24px);
 }
+.hero > .container .chart {
+  width: 100%;
+}
