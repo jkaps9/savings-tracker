@@ -49,6 +49,7 @@
   gap: variables.$spacing-125;
   justify-content: center;
   padding: variables.$spacing-150 variables.$spacing-250;
+  text-wrap: nowrap;
 
   &--primary {
     background-color: var(--primary-color);
@@ -224,5 +225,10 @@
 
   .show-on-mobile {
     display: none;
+  }
+
+  .row.section-top {
+    align-items: center;
+    flex-direction: row;
   }
 }
