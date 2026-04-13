@@ -49,7 +49,7 @@ export default function (config) {
 
   return {
     pathPrefix:
-      process.env.NODE_ENV === "production" ? "/eleventy-template/" : "/",
+      process.env.NODE_ENV === "production" ? "/savings-tracker/" : "/",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
