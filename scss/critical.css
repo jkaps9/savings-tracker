@@ -103,10 +103,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-section {
-  padding: var(--section-spacing) 0;
-}
-
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
@@ -199,7 +195,6 @@ section {
   --card-bg: #313131;
   --container-max-width: 90rem;
   --container-width: 90%;
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
   --card-padding: 1.5rem 2rem;
 }
 
@@ -212,4 +207,10 @@ body {
 
 header {
   padding: 16px 0;
+}
+
+main {
+  display: grid;
+  gap: 32px;
+  margin: 48px 0;
 }
