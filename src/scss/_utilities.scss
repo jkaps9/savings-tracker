@@ -116,6 +116,15 @@
   padding: variables.$spacing-200;
 }
 
+.bg-gradient {
+  background: linear-gradient(
+    270deg,
+    var(--primary-color) 0.35%,
+    variables.$orange-700 99.65%
+  );
+  border-color: variables.$whitealpha-30;
+}
+
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
