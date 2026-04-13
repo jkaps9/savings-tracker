@@ -167,6 +167,27 @@ section {
   background-color: #1f1f1f;
   box-shadow: 0 0 0 2px #101010, 0 0 0 4px var(--primary-color);
 }
+.btn--secondary:disabled {
+  background-color: #1f1f1f;
+  color: #898a8b;
+}
+.btn--secondary:disabled svg * {
+  stroke: #898a8b;
+}
+.btn--tertiary {
+  background-color: transparent;
+  color: var(--text-color);
+}
+.btn--tertiary svg * {
+  stroke: var(--text-color);
+}
+.btn--tertiary:hover {
+  background-color: #1f1f1f;
+}
+.btn--tertiary:focus {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #101010, 0 0 0 4px var(--primary-color);
+}
 
 :root {
   --primary-color: #ff5722;
@@ -187,4 +208,8 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
+}
+
+header {
+  padding: 16px 0;
 }
