@@ -12,7 +12,7 @@
   --text-color: #{variables.$neutral-0};
   --text-color-dark: #{variables.$neutral-900};
   --border-color: #{variables.$neutral-600};
-  --card-bg: #{variables.$neutral-700};
+  --card-bg: #{variables.$neutral-800};
 
   // CONTAINER
   --container-max-width: 90rem;
@@ -28,6 +28,10 @@ body {
   background-color: var(--bg-color);
 }
 
+h3 {
+  @include fonts.textpreset5semibold;
+}
+
 header {
   padding: variables.$spacing-200 0;
 }
@@ -36,4 +40,13 @@ main {
   display: grid;
   gap: variables.$spacing-400;
   margin: variables.$spacing-600 0;
+}
+
+.hero > .container {
+  display: grid;
+  gap: clamp(
+    variables.$spacing-200,
+    0.5229rem + 2.0356vw,
+    variables.$spacing-300
+  );
 }
