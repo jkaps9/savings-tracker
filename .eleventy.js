@@ -17,6 +17,10 @@ export default function (config) {
   config.addExtension("scss", {
     outputFileExtension: "css",
 
+    compileOptions: {
+      cache: false,
+    },
+
     // opt-out of Eleventy Layouts
     useLayouts: false,
 
