@@ -1,0 +1,351 @@
+{
+  "goals": [
+    {
+      "id": "goal-001",
+      "name": "MacBook Pro M4",
+      "target": 2499,
+      "deadline": "2026-06-01",
+      "createdAt": "2025-11-15T09:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-001-a",
+          "amount": 500,
+          "note": "Starting fund from freelance project",
+          "createdAt": "2025-11-15T09:30:00.000Z"
+        },
+        {
+          "id": "dep-001-b",
+          "amount": 200,
+          "note": "Monthly savings",
+          "createdAt": "2025-12-01T10:00:00.000Z"
+        },
+        {
+          "id": "dep-001-c",
+          "amount": 350,
+          "note": "Sold old monitor",
+          "createdAt": "2025-12-18T14:22:00.000Z"
+        },
+        {
+          "id": "dep-001-d",
+          "amount": 200,
+          "note": "Monthly savings",
+          "createdAt": "2026-01-01T08:15:00.000Z"
+        },
+        {
+          "id": "dep-001-e",
+          "amount": 200,
+          "note": "Monthly savings",
+          "createdAt": "2026-02-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-001-f",
+          "amount": 250,
+          "note": "Bonus from client work",
+          "createdAt": "2026-02-20T11:30:00.000Z"
+        },
+        {
+          "id": "dep-001-g",
+          "amount": 200,
+          "note": "Monthly savings",
+          "createdAt": "2026-03-01T09:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-002",
+      "name": "Mechanical Keyboard",
+      "target": 350,
+      "deadline": "2026-03-15",
+      "createdAt": "2025-12-01T11:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-002-a",
+          "amount": 75,
+          "note": "Birthday money",
+          "createdAt": "2025-12-10T16:45:00.000Z"
+        },
+        {
+          "id": "dep-002-b",
+          "amount": 50,
+          "note": "",
+          "createdAt": "2025-12-22T09:00:00.000Z"
+        },
+        {
+          "id": "dep-002-c",
+          "amount": 100,
+          "note": "Holiday bonus",
+          "createdAt": "2025-12-28T12:30:00.000Z"
+        },
+        {
+          "id": "dep-002-d",
+          "amount": 75,
+          "note": "",
+          "createdAt": "2026-01-05T11:20:00.000Z"
+        },
+        {
+          "id": "dep-002-e",
+          "amount": 50,
+          "note": "Almost there!",
+          "createdAt": "2026-02-01T08:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-003",
+      "name": "React Conf Trip",
+      "target": 1800,
+      "deadline": "2026-05-15",
+      "createdAt": "2025-10-20T14:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-003-a",
+          "amount": 299,
+          "note": "Early bird ticket purchased",
+          "createdAt": "2025-10-20T14:30:00.000Z"
+        },
+        {
+          "id": "dep-003-b",
+          "amount": 150,
+          "note": "Flight fund",
+          "createdAt": "2025-11-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-003-c",
+          "amount": 150,
+          "note": "Flight fund",
+          "createdAt": "2025-12-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-003-d",
+          "amount": 200,
+          "note": "Hotel savings",
+          "createdAt": "2025-12-15T17:45:00.000Z"
+        },
+        {
+          "id": "dep-003-e",
+          "amount": 150,
+          "note": "",
+          "createdAt": "2026-01-02T10:00:00.000Z"
+        },
+        {
+          "id": "dep-003-f",
+          "amount": 200,
+          "note": "Airbnb deposit",
+          "createdAt": "2026-02-01T09:30:00.000Z"
+        },
+        {
+          "id": "dep-003-g",
+          "amount": 150,
+          "note": "Spending money fund",
+          "createdAt": "2026-03-01T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-004",
+      "name": "Anniversary Trip to Italy",
+      "target": 4000,
+      "deadline": "2026-09-15",
+      "createdAt": "2025-09-01T10:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-004-a",
+          "amount": 400,
+          "note": "Initial deposit",
+          "createdAt": "2025-09-01T10:30:00.000Z"
+        },
+        {
+          "id": "dep-004-b",
+          "amount": 300,
+          "note": "Monthly contribution",
+          "createdAt": "2025-10-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-004-c",
+          "amount": 300,
+          "note": "Monthly contribution",
+          "createdAt": "2025-11-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-004-d",
+          "amount": 500,
+          "note": "Holiday bonus",
+          "createdAt": "2025-12-20T14:20:00.000Z"
+        },
+        {
+          "id": "dep-004-e",
+          "amount": 300,
+          "note": "Monthly contribution",
+          "createdAt": "2026-01-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-004-f",
+          "amount": 300,
+          "note": "Monthly contribution",
+          "createdAt": "2026-02-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-004-g",
+          "amount": 300,
+          "note": "Monthly contribution",
+          "createdAt": "2026-03-01T09:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-005",
+      "name": "4K Monitor Upgrade",
+      "target": 600,
+      "deadline": "2026-04-30",
+      "createdAt": "2025-12-10T08:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-005-a",
+          "amount": 100,
+          "note": "Starting the fund",
+          "createdAt": "2025-12-10T08:30:00.000Z"
+        },
+        {
+          "id": "dep-005-b",
+          "amount": 75,
+          "note": "",
+          "createdAt": "2025-12-24T12:00:00.000Z"
+        },
+        {
+          "id": "dep-005-c",
+          "amount": 100,
+          "note": "Found a deal, need to save faster",
+          "createdAt": "2026-01-15T14:00:00.000Z"
+        },
+        {
+          "id": "dep-005-d",
+          "amount": 75,
+          "note": "",
+          "createdAt": "2026-02-01T10:00:00.000Z"
+        },
+        {
+          "id": "dep-005-e",
+          "amount": 100,
+          "note": "",
+          "createdAt": "2026-03-01T09:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-006",
+      "name": "Emergency Fund",
+      "target": 5000,
+      "deadline": null,
+      "createdAt": "2025-06-01T12:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-006-a",
+          "amount": 500,
+          "note": "Starting fresh",
+          "createdAt": "2025-06-01T12:30:00.000Z"
+        },
+        {
+          "id": "dep-006-b",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2025-07-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-c",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2025-08-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-d",
+          "amount": 350,
+          "note": "Smaller month",
+          "createdAt": "2025-09-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-e",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2025-10-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-f",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2025-11-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-g",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2025-12-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-h",
+          "amount": 350,
+          "note": "Post-holiday tight month",
+          "createdAt": "2026-01-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-i",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2026-02-01T09:00:00.000Z"
+        },
+        {
+          "id": "dep-006-j",
+          "amount": 400,
+          "note": "",
+          "createdAt": "2026-03-01T09:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-007",
+      "name": "New Road Bike",
+      "target": 1500,
+      "deadline": "2026-05-01",
+      "createdAt": "2025-11-10T15:00:00.000Z",
+      "deposits": [
+        {
+          "id": "dep-007-a",
+          "amount": 200,
+          "note": "Sold old bike",
+          "createdAt": "2025-11-10T15:30:00.000Z"
+        },
+        {
+          "id": "dep-007-b",
+          "amount": 150,
+          "note": "",
+          "createdAt": "2025-12-01T10:00:00.000Z"
+        },
+        {
+          "id": "dep-007-c",
+          "amount": 150,
+          "note": "",
+          "createdAt": "2026-01-03T11:00:00.000Z"
+        },
+        {
+          "id": "dep-007-d",
+          "amount": 200,
+          "note": "Tax refund portion",
+          "createdAt": "2026-02-10T13:00:00.000Z"
+        },
+        {
+          "id": "dep-007-e",
+          "amount": 150,
+          "note": "",
+          "createdAt": "2026-03-01T10:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-008",
+      "name": "Ergonomic Chair",
+      "target": 1200,
+      "deadline": "2026-08-01",
+      "createdAt": "2026-01-01T09:00:00.000Z",
+      "deposits": []
+    }
+  ]
+}

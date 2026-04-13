@@ -1,0 +1,103 @@
+@use "variables";
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/fonts/bricolage-grotesque-v9-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/inter-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/fonts/inter-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/inter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@mixin textpreset1 {
+  font-size: 64px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+@mixin textpreset1mobile {
+  font-size: 44px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+@mixin textpreset2 {
+  font-size: 32px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin textpreset3 {
+  font-size: 24px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+@mixin textpreset4 {
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+@mixin textpreset5 {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+}
+
+@mixin textpreset5semibold {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+
+@mixin textpreset6 {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+
+@mixin textpreset7 {
+  font-size: 11px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
