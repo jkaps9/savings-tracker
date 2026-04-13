@@ -49,4 +49,8 @@ main {
     0.5229rem + 2.0356vw,
     variables.$spacing-300
   );
+
+  .chart {
+    width: 100%;
+  }
 }
