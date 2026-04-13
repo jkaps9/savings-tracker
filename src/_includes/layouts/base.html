@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>{{ site.name }} | {{ title }}</title>
+    <title>{{ title }} | {{ data.siteName }}</title>
     <link
       rel="stylesheet"
       href="{{ '/scss/critical.css' | url }}"
@@ -20,10 +20,6 @@
   <body>
     {% include "partials/site-header.html" %}
     <main>{% block content %}{% endblock %}</main>
-    {% include "partials/site-footer.html" %}
     <script src="{{ '/main.js' | url }}"></script>
-    <!-- {% if title === "Blog" %}
-      <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    {% endif %} -->
   </body>
 </html>
