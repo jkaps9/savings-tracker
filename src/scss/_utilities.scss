@@ -71,5 +71,33 @@ section {
         0 0 0 2px variables.$neutral-900,
         0 0 0 4px var(--primary-color);
     }
+    &:disabled {
+      background-color: variables.$neutral-800;
+      color: variables.$neutral-400;
+
+      svg * {
+        stroke: variables.$neutral-400;
+      }
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: var(--text-color);
+
+    svg * {
+      stroke: var(--text-color);
+    }
+
+    &:hover {
+      background-color: variables.$neutral-800;
+    }
+
+    &:focus {
+      background-color: transparent;
+      box-shadow:
+        0 0 0 2px variables.$neutral-900,
+        0 0 0 4px var(--primary-color);
+    }
   }
 }
