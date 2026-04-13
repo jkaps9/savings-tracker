@@ -133,6 +133,14 @@
     variables.$spacing-300
   );
 }
+
+.row.section-top {
+  align-items: flex-start;
+  flex-direction: column;
+  // TODO: check figma for spacing
+  gap: variables.$spacing-100;
+}
+
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;

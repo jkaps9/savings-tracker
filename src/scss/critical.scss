@@ -47,3 +47,16 @@ main {
     width: 100%;
   }
 }
+
+.goals {
+  .buttons {
+    align-self: stretch;
+    justify-content: center;
+    // TODO: check figma for spacing
+    gap: variables.$spacing-200;
+
+    & > * {
+      flex: 1;
+    }
+  }
+}
