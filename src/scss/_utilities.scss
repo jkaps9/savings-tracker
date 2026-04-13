@@ -163,6 +163,18 @@
     height: 100%;
     position: relative;
     z-index: 2;
+
+    &--complete {
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.bg-gradient {
+  .progress-bar {
+    &__completion {
+      background-color: variables.$neutral-0;
+    }
   }
 }
 
