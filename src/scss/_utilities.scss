@@ -25,6 +25,10 @@
   @include fonts.textpreset1mobile;
 }
 
+.muted-text {
+  // TODO: check figma for color
+  color: variables.$neutral-400;
+}
 .btn {
   @include fonts.textpreset5;
   align-items: center;
@@ -114,6 +118,27 @@
   flex-direction: column;
   gap: variables.$spacing-400;
   padding: variables.$spacing-200;
+
+  .bottom {
+    display: grid;
+    // TODO: check Figma for spacing
+    gap: variables.$spacing-200;
+  }
+
+  .details {
+    align-items: center;
+    display: flex;
+    // TODO: check figma for gap
+    gap: variables.$spacing-200;
+  }
+}
+
+.divider-dot {
+  // TODO: check figma for color and size
+  background-color: variables.$neutral-400;
+  border-radius: variables.$cornerradius-full;
+  height: 8px;
+  width: 8px;
 }
 
 .bg-gradient {
