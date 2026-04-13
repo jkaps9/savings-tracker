@@ -1,17 +1,17 @@
 @use "fonts";
 @use "reset";
 @use "sass:map";
-@use "variables";
 @use "utilities";
+@use "variables";
 
 :root {
   // COLORS
-  --primary-color: #1e3a8a;
-  --accent-color: #84cc16;
-  --bg-color: #f1f1f1;
-  --text-color: #333;
-  --border-color: #e0e0e0;
-  --card-bg: #ffffff;
+  --primary-color: #{variables.$orange-400};
+  --accent-color: #{variables.$green-500};
+  --bg-color: #{variables.$neutral-900};
+  --text-color: #{variables.$neutral-0};
+  --border-color: #{variables.$neutral-500};
+  --card-bg: #{variables.$neutral-700};
 
   // CONTAINER
   --container-max-width: 90rem;
@@ -26,8 +26,4 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-}
-
-p {
-  color: var(--text-secondary);
 }
