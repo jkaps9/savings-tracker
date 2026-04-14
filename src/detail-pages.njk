@@ -4,6 +4,5 @@ pagination:
     size: 1
     alias: goal
 permalink: "goals/{{ goal.name | slugify }}/"
+layout: "layouts/goal-details.html"
 ---
-
-{{ goal.name }} due {{ goal.deadline | dueDate }}
