@@ -92,8 +92,35 @@
                 placeholder="e.g. Monthly savings"
               />
             </div>
+            <button class="btn btn--primary">Add funds</button>
           </form>
         </div>
+      </div>
+      <div class="deposit-history">
+        <div class="row">
+          <h3>Deposit history</h3>
+          <p class="light-text small-text">
+            {{ goal.deposits | length }} deposits
+          </p>
+        </div>
+        <div class="divider"></div>
+        <ul class="deposit-list">
+          {% for deposit in goal.deposits %}
+            <li class="deposit-list__item row">
+              <div class="icon">{% include "svgs/icon-arrow-down.svg" %}</div>
+              <div class="details column">
+                <p class="small-text">{{ deposit.note }}</p>
+                <p class="light-text small-text">
+                  {{ deposit.createdAt | readableDate }}
+                </p>
+              </div>
+
+              <p class="accent-text">
+                +${{ deposit.amount | amountWithDecimals }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </section>

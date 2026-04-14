@@ -238,6 +238,13 @@
 .align-right {
   text-align: right;
 }
+
+.divider {
+  background: variables.$neutral-800;
+  height: 1px;
+  margin-top: variables.$spacing-200;
+  width: 100%;
+}
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
