@@ -318,6 +318,11 @@ select {
     grid-column: span 2;
   }
 }
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .span-2-tablet {
+    grid-column: span 2;
+  }
+}
 :root {
   --primary-color: #ff5722;
   --accent-color: #4ade80;
@@ -338,7 +343,22 @@ body {
   background-color: var(--bg-color);
 }
 
+h2 {
+  font-size: 32px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 h3 {
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+h4 {
   font-size: 16px;
   font-family: Inter, sans-serif;
   font-weight: 600;
@@ -386,5 +406,33 @@ main {
 @media (min-width: 64rem) {
   .hero > .card-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .goals > .container > .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "one one two" "three four two" "five six six" "five seven eight";
+  }
+  .goals > .container > .card-container .card:nth-child(1) {
+    grid-area: one;
+  }
+  .goals > .container > .card-container .card:nth-child(2) {
+    grid-area: three;
+  }
+  .goals > .container > .card-container .card:nth-child(3) {
+    grid-area: four;
+  }
+  .goals > .container > .card-container .card:nth-child(4) {
+    grid-area: two;
+  }
+  .goals > .container > .card-container .card:nth-child(5) {
+    grid-area: six;
+  }
+  .goals > .container > .card-container .card:nth-child(6) {
+    grid-area: seven;
+  }
+  .goals > .container > .card-container .card:nth-child(7) {
+    grid-area: eight;
+  }
+  .goals > .container > .card-container .card:nth-child(8) {
+    grid-area: five;
   }
 }
