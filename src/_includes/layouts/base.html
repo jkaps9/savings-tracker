@@ -21,5 +21,79 @@
     {% include "partials/site-header.html" %}
     <main>{% block content %}{% endblock %}</main>
     <script src="{{ '/main.js' | url }}"></script>
+    <!-- TODO: figure out if i can truncate bars on smaller screens (e.g. show fewer bars) -->
+    <!-- TODO: see if i can make bars shorter (e.g. shorter y axis?) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script>
+      // Hero Bar Chart
+      const ctx = document.getElementById("chart");
+
+      const data = {
+        labels: [
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+          "Jan",
+          "Feb",
+          "Mar",
+        ],
+        datasets: [
+          {
+            data: [
+              0, 0, 500, 400, 400, 1150, 1149, 1550, 1950, 1025, 1550, 1550,
+            ],
+            backgroundColor: ["#FF5722"],
+            barPercentage: 0.9,
+            borderColor: ["rgba(255, 255, 255, 0.30)"],
+            borderRadius: 8,
+            borderWidth: 1,
+            categoryPercentage: 1.0,
+            hoverBackgroundColor: ["#FF5722"],
+          },
+        ],
+      };
+
+      const config = {
+        type: "bar",
+        data: data,
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              display: false,
+            },
+            x: {
+              ticks: {
+                display: true,
+                color: "#ffffff",
+                font: {
+                  family: "Inter",
+                  lineHeight: 1.2,
+                  size: 11,
+                  weight: 600,
+                },
+              },
+              grid: {
+                display: false,
+              },
+            },
+          },
+        },
+      };
+
+      new Chart(ctx, config);
+    </script>
   </body>
 </html>
