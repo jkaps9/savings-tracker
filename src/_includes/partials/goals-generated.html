@@ -1,5 +1,5 @@
 <section class="goals">
-  <div class="conatiner card-container">
+  <div class="container card-container">
     <div class="row section-top">
       <h2>Your goals</h2>
       <div class="buttons row">
@@ -16,10 +16,8 @@
         <div class="card">
           <h3>{{ goal.name }}</h3>
           <div class="bottom">
-            <!-- calculate total of deposits -->
-            {% set total = 1900 %}
-            <!-- calculate percentage -->
-            {% set percentage = 76 %}
+            {% set total = goal.deposits | sumDeposits %}
+            {% set percentage = (100 * total / goal.target) | round %}
             <div class="large-text">{{ percentage }}%</div>
             <div class="progress-bar">
               <div

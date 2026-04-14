@@ -64,6 +64,12 @@ export default function (config) {
     );
   });
 
+  config.addFilter("sumDeposits", function (array) {
+    return array.reduce((accumulator, item) => {
+      return accumulator + (item.amount || 0);
+    }, 0);
+  });
+
   return {
     pathPrefix:
       process.env.NODE_ENV === "production" ? "/savings-tracker/" : "/",
