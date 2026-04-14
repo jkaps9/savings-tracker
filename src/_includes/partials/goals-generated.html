@@ -13,15 +13,26 @@
     </div>
     <div class="card-container">
       {% for goal in data.goals %}
-        <div class="card">
-          <h3>{{ goal.name }}</h3>
+        {% set total = goal.deposits | sumDeposits %}
+        {% set percentage = (100 * total / goal.target) | round %}
+        <div
+          class="card  {% if percentage >75 and percentage <100 %}bg-gradient{% endif %}"
+        >
+          <div class="row">
+            <h3>{{ goal.name }}</h3>
+            {% if percentage >=100 %}
+              <div class="badge accent-text">Complete</div>
+            {% endif %}
+          </div>
           <div class="bottom">
-            {% set total = goal.deposits | sumDeposits %}
-            {% set percentage = (100 * total / goal.target) | round %}
-            <div class="large-text">{{ percentage }}%</div>
+            <div
+              class="large-text {% if percentage >=100 %}accent-text{% endif %}"
+            >
+              {{ percentage }}%
+            </div>
             <div class="progress-bar">
               <div
-                class="progress-bar__completion"
+                class="progress-bar__completion {% if percentage >=100 %}progress-bar__completion--complete{% endif %}"
                 style="width: {{ percentage }}%;"
               ></div>
             </div>
