@@ -51,6 +51,19 @@ export default function (config) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
   });
 
+  config.addFilter("dueDate", (dateStr) => {
+    const dt = new Date(dateStr);
+    return DateTime.fromJSDate(dt)
+      .toLocaleString(DateTime.DATE_MED)
+      .replace(",", "");
+  });
+
+  config.addFilter("amount", (amountObj) => {
+    return (
+      "$" + amountObj.toLocaleString("en-US", { maximumFractionalDigits: 0 })
+    );
+  });
+
   return {
     pathPrefix:
       process.env.NODE_ENV === "production" ? "/savings-tracker/" : "/",

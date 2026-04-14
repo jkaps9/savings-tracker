@@ -1,0 +1,40 @@
+<section class="goals">
+  <div class="conatiner card-container">
+    <div class="row section-top">
+      <h2>Your goals</h2>
+      <div class="buttons row">
+        <div class="btn btn--secondary">
+          {% include "svgs/icon-filter.svg" %} Filters
+        </div>
+        <div class="btn btn--secondary">
+          {% include "svgs/icon-sort.svg" %} Sory by
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      {% for goal in data.goals %}
+        <div class="card">
+          <h3>{{ goal.name }}</h3>
+          <div class="bottom">
+            <!-- calculate total of deposits -->
+            {% set total = 1900 %}
+            <!-- calculate percentage -->
+            {% set percentage = 76 %}
+            <div class="large-text">{{ percentage }}%</div>
+            <div class="progress-bar">
+              <div
+                class="progress-bar__completion"
+                style="width: {{ percentage }}%;"
+              ></div>
+            </div>
+            <div class="details">
+              <p>{{ total | amount }} of {{ goal.target | amount }}</p>
+              <div class="divider-dot"></div>
+              <p>Due {{ goal.deadline | dueDate }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
