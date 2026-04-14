@@ -28,7 +28,15 @@ body {
   background-color: var(--bg-color);
 }
 
+h2 {
+  @include fonts.textpreset2;
+}
+
 h3 {
+  @include fonts.textpreset4;
+}
+
+h4 {
   @include fonts.textpreset5semibold;
 }
 
