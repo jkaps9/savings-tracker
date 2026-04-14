@@ -50,6 +50,11 @@ main {
   margin: variables.$spacing-600 0;
 }
 
+.card a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .hero > .container {
   .chart {
     height: 100%;

@@ -15,11 +15,14 @@
       {% for goal in data.goals %}
         {% set total = goal.deposits | sumDeposits %}
         {% set percentage = (100 * total / goal.target) | round %}
+
         <div
           class="card  {% if percentage >75 and percentage <100 %}bg-gradient{% endif %}"
         >
           <div class="row">
-            <h3>{{ goal.name }}</h3>
+            <a href="{{ './goals/' + goal.name | slugify + '/' }}">
+              <h3>{{ goal.name }}</h3>
+            </a>
             {% if percentage >=100 %}
               <div class="badge accent-text">Complete</div>
             {% endif %}
