@@ -57,8 +57,33 @@
           const config = {
             type: "bar",
             data: data,
+            plugins: [ChartDataLabels],
             options: {
               plugins: {
+                datalabels: {
+                  color: "#B7B7B7",
+                  formatter: function (value, context) {
+                    return (
+                      "$" +
+                      value.toLocaleString("en-US", {
+                        maximumFractionDigits: 0,
+                      })
+                    );
+                  },
+                  labels: {
+                    value: {
+                      align: "bottom",
+                      anchor: "start",
+                      font: {
+                        family: "Inter",
+                        lineHeight: 1.2,
+                        size: 11,
+                        weight: 600,
+                      },
+                      offset: 10,
+                    },
+                  },
+                },
                 legend: {
                   display: false,
                 },
@@ -78,6 +103,7 @@
                       size: 11,
                       weight: 600,
                     },
+                    padding: 21,
                   },
                   grid: {
                     display: false,
