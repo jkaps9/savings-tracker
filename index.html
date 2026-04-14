@@ -65,82 +65,109 @@
       <h3>Monthly deposits</h3>
       <div class="chart">
         <canvas id="chart"></canvas>
+        <!-- TODO: figure out if i can truncate bars on smaller screens (e.g. show fewer bars) -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+        <script>
+          // Hero Bar Chart
+          const ctx = document.getElementById("chart");
+
+          const data = {
+            labels: [
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+              "Jan",
+              "Feb",
+              "Mar",
+            ],
+            datasets: [
+              {
+                data: [
+                  0, 0, 500, 400, 400, 1150, 1149, 1550, 1950, 1025, 1550, 1550,
+                ],
+                backgroundColor: ["#FF5722"],
+                barPercentage: 0.9,
+                borderColor: ["rgba(255, 255, 255, 0.30)"],
+                borderRadius: 8,
+                borderWidth: 1,
+                categoryPercentage: 1.0,
+                hoverBackgroundColor: ["#FF5722"],
+              },
+            ],
+          };
+
+          const config = {
+            type: "bar",
+            data: data,
+            plugins: [ChartDataLabels],
+            options: {
+              plugins: {
+                datalabels: {
+                  color: "#B7B7B7",
+                  formatter: function (value, context) {
+                    return (
+                      "$" +
+                      value.toLocaleString("en-US", {
+                        maximumFractionDigits: 0,
+                      })
+                    );
+                  },
+                  labels: {
+                    value: {
+                      align: "bottom",
+                      anchor: "start",
+                      font: {
+                        family: "Inter",
+                        lineHeight: 1.2,
+                        size: 11,
+                        weight: 600,
+                      },
+                      offset: 10,
+                    },
+                  },
+                },
+                legend: {
+                  display: false,
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  display: false,
+                },
+                x: {
+                  ticks: {
+                    display: true,
+                    color: "#ffffff",
+                    font: {
+                      family: "Inter",
+                      lineHeight: 1.2,
+                      size: 11,
+                      weight: 600,
+                    },
+                    padding: 21,
+                  },
+                  grid: {
+                    display: false,
+                  },
+                },
+              },
+            },
+          };
+
+          new Chart(ctx, config);
+        </script>
       </div>
     </div>
   </div>
 </section>
-
-<!-- TODO: figure out if i can truncate bars on smaller screens (e.g. show fewer bars) -->
-<!-- TODO: see if i can make bars shorter (e.g. shorter y axis?) -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  // Hero Bar Chart
-  const ctx = document.getElementById("chart");
-
-  const data = {
-    labels: [
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-      "Jan",
-      "Feb",
-      "Mar",
-    ],
-    datasets: [
-      {
-        data: [0, 0, 500, 400, 400, 1150, 1149, 1550, 1950, 1025, 1550, 1550],
-        backgroundColor: ["#FF5722"],
-        barPercentage: 0.9,
-        borderColor: ["rgba(255, 255, 255, 0.30)"],
-        borderRadius: 8,
-        borderWidth: 1,
-        categoryPercentage: 1.0,
-        hoverBackgroundColor: ["#FF5722"],
-      },
-    ],
-  };
-
-  const config = {
-    type: "bar",
-    data: data,
-    options: {
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          display: false,
-        },
-        x: {
-          ticks: {
-            display: true,
-            color: "#ffffff",
-            font: {
-              family: "Inter",
-              lineHeight: 1.2,
-              size: 11,
-              weight: 600,
-            },
-          },
-          grid: {
-            display: false,
-          },
-        },
-      },
-    },
-  };
-
-  new Chart(ctx, config);
-</script>
 
   <section class="goals">
   <div class="container card-container">
@@ -308,6 +335,9 @@
 </section>
 
 </main>
-    <script src="/savings-tracker/main.js"></script>
+    <script
+      src="/savings-tracker/main.js"
+      type="module"
+    ></script>
   </body>
 </html>
