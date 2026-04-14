@@ -228,6 +228,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  justify-content: space-between;
   padding: 16px;
 }
 .card .bottom {
