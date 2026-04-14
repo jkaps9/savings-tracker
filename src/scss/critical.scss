@@ -108,25 +108,26 @@ main {
       grid-area: one;
     }
     .card:nth-child(2) {
-      grid-area: three;
-    }
-    .card:nth-child(3) {
-      grid-area: four;
-    }
-    .card:nth-child(4) {
       grid-area: two;
     }
+    .card:nth-child(3) {
+      grid-area: three;
+    }
+    .card:nth-child(4) {
+      grid-area: four;
+    }
+
     .card:nth-child(5) {
-      grid-area: six;
+      grid-area: five;
     }
     .card:nth-child(6) {
-      grid-area: seven;
+      grid-area: six;
     }
     .card:nth-child(7) {
-      grid-area: eight;
+      grid-area: seven;
     }
     .card:nth-child(8) {
-      grid-area: five;
+      grid-area: eight;
     }
   }
 }
