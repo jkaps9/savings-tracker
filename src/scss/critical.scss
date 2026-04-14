@@ -89,4 +89,39 @@ main {
   .hero > .card-container {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .goals > .container > .card-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas:
+      "one one two"
+      "three four two"
+      "five six six"
+      "five seven eight";
+
+    .card:nth-child(1) {
+      grid-area: one;
+    }
+    .card:nth-child(2) {
+      grid-area: three;
+    }
+    .card:nth-child(3) {
+      grid-area: four;
+    }
+    .card:nth-child(4) {
+      grid-area: two;
+    }
+    .card:nth-child(5) {
+      grid-area: six;
+    }
+    .card:nth-child(6) {
+      grid-area: seven;
+    }
+    .card:nth-child(7) {
+      grid-area: eight;
+    }
+    .card:nth-child(8) {
+      grid-area: five;
+    }
+  }
 }
