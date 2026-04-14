@@ -378,7 +378,11 @@ main {
 }
 
 .hero > .container .chart {
+  height: 100%;
   width: 100%;
+}
+.hero > .container .chart #chart {
+  max-width: 100%;
 }
 
 .goals .buttons {
