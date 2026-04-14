@@ -26,7 +26,7 @@
           </div>
           <div class="bottom">
             <div
-              class="large-text {% if percentage >=100 %}accent-text{% endif %}"
+              class="large-text {% if percentage >=100 %}accent-text{% elseif percentage===0 %}medium-text{% elseif percentage <=75 %}primary-text{% endif %}"
             >
               {{ percentage }}%
             </div>
@@ -39,7 +39,13 @@
             <div class="details">
               <p>{{ total | amount }} of {{ goal.target | amount }}</p>
               <div class="divider-dot"></div>
-              <p>Due {{ goal.deadline | dueDate }}</p>
+              <p class="muted-text">
+                {% if goal.deadline %}
+                  Due {{ goal.deadline | dueDate }}
+                {% else %}
+                  No deadline
+                {% endif %}
+              </p>
             </div>
           </div>
         </div>
