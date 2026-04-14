@@ -420,24 +420,24 @@ main {
     grid-area: one;
   }
   .goals > .container > .card-container .card:nth-child(2) {
-    grid-area: three;
-  }
-  .goals > .container > .card-container .card:nth-child(3) {
-    grid-area: four;
-  }
-  .goals > .container > .card-container .card:nth-child(4) {
     grid-area: two;
   }
+  .goals > .container > .card-container .card:nth-child(3) {
+    grid-area: three;
+  }
+  .goals > .container > .card-container .card:nth-child(4) {
+    grid-area: four;
+  }
   .goals > .container > .card-container .card:nth-child(5) {
-    grid-area: six;
+    grid-area: five;
   }
   .goals > .container > .card-container .card:nth-child(6) {
-    grid-area: seven;
+    grid-area: six;
   }
   .goals > .container > .card-container .card:nth-child(7) {
-    grid-area: eight;
+    grid-area: seven;
   }
   .goals > .container > .card-container .card:nth-child(8) {
-    grid-area: five;
+    grid-area: eight;
   }
 }
