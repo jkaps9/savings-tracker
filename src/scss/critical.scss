@@ -28,6 +28,10 @@ body {
   background-color: var(--bg-color);
 }
 
+h1 {
+  @include fonts.textpreset1mobile;
+}
+
 h2 {
   @include fonts.textpreset2;
 }
@@ -78,7 +82,29 @@ main {
   }
 }
 
+.goal-detail {
+  .actions {
+    a {
+      padding-inline: 0;
+      text-decoration: none;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+
+        svg * {
+          stroke: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 48rem) {
+  h1 {
+    @include fonts.textpreset1;
+  }
+
   .hero > .card-container {
     grid-template-columns: repeat(2, 1fr);
     .card:first-child {

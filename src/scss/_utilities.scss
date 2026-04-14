@@ -13,30 +13,6 @@
   justify-content: space-between;
 }
 
-.accent-text {
-  color: var(--accent-color);
-}
-
-.primary-text {
-  color: var(--primary-color);
-}
-
-.large-text {
-  @include fonts.textpreset1mobile;
-}
-
-.muted-text {
-  opacity: 0.7;
-}
-
-.light-text {
-  color: variables.$neutral-300;
-}
-
-.medium-text {
-  color: variables.$neutral-400;
-}
-
 .badge {
   @include fonts.textpreset7;
   align-items: center;
@@ -219,6 +195,34 @@
       background-color: variables.$neutral-0;
     }
   }
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.large-text {
+  @include fonts.textpreset1mobile;
+}
+
+.muted-text {
+  opacity: 0.7;
+}
+
+.light-text {
+  color: variables.$neutral-300;
+}
+
+.medium-text {
+  color: variables.$neutral-400;
+}
+
+.red-text {
+  color: variables.$red-500;
 }
 
 @media (min-width: 48rem) {

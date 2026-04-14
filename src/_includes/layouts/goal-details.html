@@ -4,6 +4,18 @@
   {% set percentage = (100 * total / goal.target) | round %}
   <section class="goal-detail">
     <div class="container">
+      <div class="actions row">
+        <a
+          href="/"
+          class="btn btn--tertiary"
+        >
+          {% include "svgs/icon-chevron-left.svg" %} Back
+        </a>
+        <div class="right">
+          <button class="btn btn--tertiary light-text">Edit goal</button>
+          <button class="btn btn--tertiary red-text">Delete goal</button>
+        </div>
+      </div>
       <h1>{{ goal.name }}</h1>
       <div class="details">
         <p class="light-text">
