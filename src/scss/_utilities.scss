@@ -29,6 +29,10 @@
   opacity: 0.7;
 }
 
+.medium-text {
+  color: variables.$neutral-400;
+}
+
 .badge {
   @include fonts.textpreset7;
   align-items: center;
