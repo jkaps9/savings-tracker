@@ -1,0 +1,9 @@
+---
+pagination:
+    data: data.goals
+    size: 1
+    alias: goal
+permalink: "goals/{{ goal.name | slugify }}/"
+---
+
+{{ goal.name }} due {{ goal.deadline | dueDate }}
