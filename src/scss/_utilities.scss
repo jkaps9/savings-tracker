@@ -212,10 +212,6 @@
   }
 }
 
-.span-2 {
-  grid-column: span 2;
-}
-
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;
@@ -232,5 +228,9 @@
   .row.section-top {
     align-items: center;
     flex-direction: row;
+  }
+
+  .span-2 {
+    grid-column: span 2;
   }
 }
