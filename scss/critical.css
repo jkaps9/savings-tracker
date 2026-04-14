@@ -369,6 +369,11 @@ main {
   margin: 48px 0;
 }
 
+.card a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .hero > .container .chart {
   height: 100%;
   width: 100%;
