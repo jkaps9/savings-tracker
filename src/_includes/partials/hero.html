@@ -23,27 +23,28 @@
         <script>
           // Hero Bar Chart
           const ctx = document.getElementById("chart");
-
+          const fullLabels = [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+            "Jan",
+            "Feb",
+            "Mar",
+          ];
+          const fullData = [
+            0, 0, 500, 400, 400, 1150, 1149, 1550, 1950, 1025, 1550, 1550,
+          ];
           const data = {
-            labels: [
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-              "Jan",
-              "Feb",
-              "Mar",
-            ],
+            labels: fullLabels,
             datasets: [
               {
-                data: [
-                  0, 0, 500, 400, 400, 1150, 1149, 1550, 1950, 1025, 1550, 1550,
-                ],
+                data: fullData,
                 backgroundColor: ["#FF5722"],
                 barPercentage: 0.9,
                 borderColor: ["rgba(255, 255, 255, 0.30)"],
@@ -115,7 +116,21 @@
             },
           };
 
-          new Chart(ctx, config);
+          const chart = new Chart(ctx, config);
+
+          function updateChartResponsively(chart) {
+            const isSmallScreen = window.innerWidth < 769;
+            const limit = isSmallScreen ? 6 : fullLabels.length;
+
+            chart.data.labels = fullLabels.slice(-limit);
+            chart.data.datasets[0].data = fullData.slice(-limit);
+            chart.update();
+          }
+
+          updateChartResponsively(chart);
+          window.addEventListener("resize", () =>
+            updateChartResponsively(chart),
+          );
         </script>
       </div>
     </div>
