@@ -1,8 +1,26 @@
 {% extends "layouts/base.html" %}
 {% block content %}
+  {% set total = goal.deposits | sumDeposits %}
+  {% set percentage = (100 * total / goal.target) | round %}
   <section class="goal-detail">
     <div class="container">
       <h1>{{ goal.name }}</h1>
+      <div class="details">
+        <p class="light-text">
+          {% if goal.deadline %}
+            Due {{ goal.deadline | dueDate }}
+          {% else %}
+            No deadline
+          {% endif %}
+        </p>
+        <div class="divider-dot"></div>
+
+        <p class="light-text">
+          {% if goal.createdAt %}
+            Created {{ goal.createdAt | readableDate }}
+          {% endif %}
+        </p>
+      </div>
     </div>
   </section>
 {% endblock %}

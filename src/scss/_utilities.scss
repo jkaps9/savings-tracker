@@ -29,6 +29,10 @@
   opacity: 0.7;
 }
 
+.light-text {
+  color: variables.$neutral-300;
+}
+
 .medium-text {
   color: variables.$neutral-400;
 }
@@ -141,12 +145,12 @@
     display: grid;
     gap: variables.$spacing-200;
   }
+}
 
-  .details {
-    align-items: center;
-    display: flex;
-    gap: variables.$spacing-100;
-  }
+.details {
+  align-items: center;
+  display: flex;
+  gap: variables.$spacing-100;
 }
 
 .divider-dot {
