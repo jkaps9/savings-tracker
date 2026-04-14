@@ -234,14 +234,4 @@
     align-items: center;
     flex-direction: row;
   }
-
-  .span-2 {
-    grid-column: span 2;
-  }
-}
-
-@media (min-width: 48rem) and (max-width: 64rem) {
-  .span-2-tablet {
-    grid-column: span 2;
-  }
 }
