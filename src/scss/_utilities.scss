@@ -26,16 +26,18 @@
 }
 
 .muted-text {
-  // TODO: check figma for color
-  color: variables.$neutral-400;
+  opacity: 0.7;
 }
 
 .badge {
-  // TODO: check figma for font, etc.
   @include fonts.textpreset7;
+  align-items: center;
+  background: variables.$green-900;
   border: 1px solid currentColor;
   border-radius: variables.$cornerradius-full;
-  padding: 0 variables.$spacing-100;
+  display: flex;
+  justify-content: center;
+  padding: 4px variables.$spacing-125;
   text-transform: uppercase;
 }
 
@@ -132,21 +134,18 @@
 
   .bottom {
     display: grid;
-    // TODO: check Figma for spacing
     gap: variables.$spacing-200;
   }
 
   .details {
     align-items: center;
     display: flex;
-    // TODO: check figma for gap
     gap: variables.$spacing-100;
   }
 }
 
 .divider-dot {
-  // TODO: check figma for color and size
-  background-color: variables.$neutral-400;
+  background-color: variables.$whitealpha-30;
   border-radius: variables.$cornerradius-full;
   height: 4px;
   width: 4px;
@@ -173,8 +172,7 @@
 .row.section-top {
   align-items: flex-start;
   flex-direction: column;
-  // TODO: check figma for spacing
-  gap: variables.$spacing-100;
+  gap: variables.$spacing-250;
 }
 
 .hide-on-mobile {
@@ -186,16 +184,15 @@
 }
 
 .progress-bar {
-  // TODO: check figma for colors, spacing, radius, etc.
   background-color: variables.$neutral-700;
-  border-radius: variables.$cornerradius-16;
-  height: variables.$spacing-200;
+  border-radius: variables.$cornerradius-full;
+  height: variables.$spacing-150;
   position: relative;
   z-index: 1;
 
   &__completion {
     background-color: var(--primary-color);
-    border-radius: variables.$cornerradius-16;
+    border-radius: variables.$cornerradius-8;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -208,6 +205,7 @@
 
 .bg-gradient {
   .progress-bar {
+    background-color: variables.$orange-800;
     &__completion {
       background-color: variables.$neutral-0;
     }
