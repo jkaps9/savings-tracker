@@ -398,15 +398,7 @@ main {
   }
   .goals > .container > .card-container {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 64rem) {
-  .hero > .card-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .goals > .container > .card-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "one one two" "three four two" "five six six" "five seven eight";
+    grid-template-areas: "one one" "two three" "four four" "five five" "six seven" "eight eight";
   }
   .goals > .container > .card-container .card:nth-child(1) {
     grid-area: one;
@@ -431,5 +423,14 @@ main {
   }
   .goals > .container > .card-container .card:nth-child(8) {
     grid-area: eight;
+  }
+}
+@media (min-width: 64rem) {
+  .hero > .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .goals > .container > .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "one one two" "three four two" "five six six" "five seven eight";
   }
 }
