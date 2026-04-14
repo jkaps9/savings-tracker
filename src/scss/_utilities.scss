@@ -13,6 +13,12 @@
   justify-content: space-between;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .badge {
   @include fonts.textpreset7;
   align-items: center;
@@ -209,6 +215,10 @@
   @include fonts.textpreset1mobile;
 }
 
+.small-text {
+  @include fonts.textpreset6;
+}
+
 .muted-text {
   opacity: 0.7;
 }
@@ -225,6 +235,9 @@
   color: variables.$red-500;
 }
 
+.align-right {
+  text-align: right;
+}
 @media (min-width: 48rem) {
   .large-text {
     @include fonts.textpreset1;

@@ -64,6 +64,13 @@ export default function (config) {
     );
   });
 
+  config.addFilter("amountWithDecimals", (amountObj) => {
+    return amountObj.toLocaleString("en-US", {
+      minimumFractionalDigits: 2,
+      maximumFractionalDigits: 2,
+    });
+  });
+
   config.addFilter("sumDeposits", function (array) {
     return array.reduce((accumulator, item) => {
       return accumulator + (item.amount || 0);

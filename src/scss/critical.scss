@@ -100,6 +100,43 @@ main {
   }
 }
 
+// Forms
+label {
+  display: block;
+}
+
+input {
+  @include fonts.textpreset5;
+  align-items: center;
+  background: variables.$neutral-700;
+  border: 1px solid variables.$neutral-500;
+  border-radius: variables.$cornerradius-8;
+  color: var(--text-color);
+  display: flex;
+  min-height: 54px;
+  padding: 0 variables.$spacing-200;
+  padding-left: calc(variables.$spacing-200 + variables.$spacing-400);
+
+  &:placeholder {
+    @include fonts.textpreset5;
+  }
+}
+
+.input-with-icon {
+  position: relative;
+  & > .icon {
+    position: absolute;
+    left: variables.$spacing-200;
+    top: 50%;
+    transform: translateY(-33%);
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: variables.$spacing-125;
+}
+
 @media (min-width: 48rem) {
   h1 {
     @include fonts.textpreset1;
