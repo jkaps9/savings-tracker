@@ -33,94 +33,96 @@
           {% endif %}
         </p>
       </div>
-      <div class="card-container">
-        <div class="card">
+      <div class="goal-detail__main-content">
+        <div class="card-container">
+          <div class="card">
+            <div class="row">
+              <p class="large-text primary-text">{{ percentage }}%</p>
+              {% set remaining = goal.target - total %}
+              <p class="light-text">
+                ${{ remaining | amountWithDecimals }} remaining
+              </p>
+            </div>
+            <div class="progress-bar">
+              <div
+                class="progress-bar__completion {% if percentage >=100 %}progress-bar__completion--complete{% endif %}"
+                style="width: {{ percentage }}%;"
+              ></div>
+            </div>
+            <div class="row">
+              <div class="column">
+                <p class="small-text">${{ total | amountWithDecimals }}</p>
+                <p class="light-text  small-text">Saved so far</p>
+              </div>
+              <div class="column">
+                <p class="small-text">
+                  of ${{ goal.target | amountWithDecimals }}
+                </p>
+                <p class="light-text small-text align-right">Target</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Add deposit</h3>
+            <form
+              action=""
+              id="add-deposit"
+            >
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <div class="input-with-icon">
+                  <input
+                    type="number"
+                    id="amount"
+                    min="0"
+                    name="amount"
+                    step="0.01"
+                    placeholder="0.00"
+                    required
+                  />
+                  <div class="icon">{% include "svgs/icon-dollar.svg" %}</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="note">Note (optional)</label>
+                <input
+                  type="text"
+                  id="note"
+                  name="note"
+                  placeholder="e.g. Monthly savings"
+                />
+              </div>
+              <button class="btn btn--primary">Add funds</button>
+            </form>
+          </div>
+        </div>
+        <div class="deposit-history">
           <div class="row">
-            <p class="large-text primary-text">{{ percentage }}%</p>
-            {% set remaining = goal.target - total %}
-            <p class="light-text">
-              ${{ remaining | amountWithDecimals }} remaining
+            <h3>Deposit history</h3>
+            <p class="light-text small-text">
+              {{ goal.deposits | length }} deposits
             </p>
           </div>
-          <div class="progress-bar">
-            <div
-              class="progress-bar__completion {% if percentage >=100 %}progress-bar__completion--complete{% endif %}"
-              style="width: {{ percentage }}%;"
-            ></div>
-          </div>
-          <div class="row">
-            <div class="column">
-              <p class="small-text">${{ total | amountWithDecimals }}</p>
-              <p class="light-text  small-text">Saved so far</p>
-            </div>
-            <div class="column">
-              <p class="small-text">
-                of ${{ goal.target | amountWithDecimals }}
-              </p>
-              <p class="light-text small-text align-right">Target</p>
-            </div>
-          </div>
-        </div>
+          <div class="divider"></div>
+          <ul class="deposit-list">
+            {% for deposit in goal.deposits %}
+              <li class="deposit-list__item row">
+                <div class="icon">{% include "svgs/icon-arrow-down.svg" %}</div>
+                <div class="details column">
+                  <p class="small-text">{{ deposit.note }}</p>
+                  <p class="light-text small-text">
+                    {{ deposit.createdAt | readableDate }}
+                  </p>
+                </div>
 
-        <div class="card">
-          <h3>Add deposit</h3>
-          <form
-            action=""
-            id="add-deposit"
-          >
-            <div class="form-group">
-              <label for="amount">Amount</label>
-              <div class="input-with-icon">
-                <input
-                  type="number"
-                  id="amount"
-                  min="0"
-                  name="amount"
-                  step="0.01"
-                  placeholder="0.00"
-                  required
-                />
-                <div class="icon">{% include "svgs/icon-dollar.svg" %}</div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="note">Note (optional)</label>
-              <input
-                type="text"
-                id="note"
-                name="note"
-                placeholder="e.g. Monthly savings"
-              />
-            </div>
-            <button class="btn btn--primary">Add funds</button>
-          </form>
-        </div>
-      </div>
-      <div class="deposit-history">
-        <div class="row">
-          <h3>Deposit history</h3>
-          <p class="light-text small-text">
-            {{ goal.deposits | length }} deposits
-          </p>
-        </div>
-        <div class="divider"></div>
-        <ul class="deposit-list">
-          {% for deposit in goal.deposits %}
-            <li class="deposit-list__item row">
-              <div class="icon">{% include "svgs/icon-arrow-down.svg" %}</div>
-              <div class="details column">
-                <p class="small-text">{{ deposit.note }}</p>
-                <p class="light-text small-text">
-                  {{ deposit.createdAt | readableDate }}
+                <p class="accent-text">
+                  +${{ deposit.amount | amountWithDecimals }}
                 </p>
-              </div>
-
-              <p class="accent-text">
-                +${{ deposit.amount | amountWithDecimals }}
-              </p>
-            </li>
-          {% endfor %}
-        </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
   </section>

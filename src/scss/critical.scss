@@ -99,9 +99,6 @@ main {
     }
   }
 
-  .deposit-history {
-    margin: variables.$spacing-400 0;
-  }
   .deposit-list__item {
     align-items: center;
     display: flex;
@@ -128,6 +125,12 @@ main {
     .details {
       flex: 1;
     }
+  }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-400;
   }
 }
 
