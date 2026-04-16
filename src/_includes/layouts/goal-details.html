@@ -1,3 +1,4 @@
+{% set title = goal.name %}
 {% extends "layouts/base.html" %}
 {% block content %}
   {% set total = goal.deposits | sumDeposits %}
