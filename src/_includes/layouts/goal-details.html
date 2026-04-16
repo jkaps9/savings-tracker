@@ -2,6 +2,7 @@
 {% block content %}
   {% set total = goal.deposits | sumDeposits %}
   {% set percentage = (100 * total / goal.target) | round %}
+  {% set remaining = goal.target - total %}
   <section class="goal-detail">
     <div class="container">
       <div class="goal-detail__top">
@@ -38,31 +39,32 @@
       <div class="goal-detail__main-content">
         <div class="card-container">
           <div class="card">
-            <div class="row">
-              <p class="large-text primary-text">{{ percentage }}%</p>
-              {% set remaining = goal.target - total %}
-              <p class="light-text">
-                ${{ remaining | amountWithDecimals }} remaining
-              </p>
-            </div>
-            <div class="progress-bar">
-              <div
-                class="progress-bar__completion"
-                style="width: {{ percentage }}%;"
-              ></div>
-            </div>
-            <div class="row">
-              <div class="column">
-                <p class="small-text">${{ total | amountWithDecimals }}</p>
-                <p class="light-text  small-text">Saved so far</p>
-              </div>
-              <div class="column">
-                <p class="small-text">
-                  of ${{ goal.target | amountWithDecimals }}
+            {% if percentage < 100 %}
+              <div class="row">
+                <p class="large-text primary-text">{{ percentage }}%</p>
+                <p class="light-text">
+                  ${{ remaining | amountWithDecimals }} remaining
                 </p>
-                <p class="light-text small-text align-right">Target</p>
               </div>
-            </div>
+              <div class="progress-bar">
+                <div
+                  class="progress-bar__completion"
+                  style="width: {{ percentage }}%;"
+                ></div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <p class="small-text">${{ total | amountWithDecimals }}</p>
+                  <p class="light-text  small-text">Saved so far</p>
+                </div>
+                <div class="column">
+                  <p class="small-text">
+                    of ${{ goal.target | amountWithDecimals }}
+                  </p>
+                  <p class="light-text small-text align-right">Target</p>
+                </div>
+              </div>
+            {% endif %}
           </div>
 
           {% if percentage < 100 %}
