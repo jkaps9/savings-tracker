@@ -255,4 +255,14 @@ form {
       "five six six"
       "five seven eight";
   }
+
+  .goal-detail {
+    &__main-content {
+      flex-direction: row;
+    }
+
+    .card-container {
+      flex: 1;
+    }
+  }
 }
