@@ -50,247 +50,251 @@
   
   <section class="goal-detail">
     <div class="container">
-      <div class="actions row">
-        <a
-          href="/"
-          class="btn btn--tertiary"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#898a8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="m12.5 15-5-5 5-5"/></svg> Back
-        </a>
-        <div class="right">
-          <button class="btn btn--tertiary light-text">Edit goal</button>
-          <button class="btn btn--tertiary red-text">Delete goal</button>
-        </div>
-      </div>
-      <h1>Emergency Fund</h1>
-      <div class="details">
-        <p class="light-text">
-          
-            No deadline
-          
-        </p>
-        <div class="divider-dot"></div>
-
-        <p class="light-text">
-          
-            Created Jun 1, 2025
-          
-        </p>
-      </div>
-      <div class="card-container">
-        <div class="card">
-          <div class="row">
-            <p class="large-text primary-text">80%</p>
-            
-            <p class="light-text">
-              $1,000 remaining
-            </p>
-          </div>
-          <div class="progress-bar">
-            <div
-              class="progress-bar__completion "
-              style="width: 80%;"
-            ></div>
-          </div>
-          <div class="row">
-            <div class="column">
-              <p class="small-text">$4,000</p>
-              <p class="light-text  small-text">Saved so far</p>
-            </div>
-            <div class="column">
-              <p class="small-text">
-                of $5,000
-              </p>
-              <p class="light-text small-text align-right">Target</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Add deposit</h3>
-          <form
-            action=""
-            id="add-deposit"
+      <div class="goal-detail__top">
+        <div class="actions row">
+          <a
+            href="/"
+            class="btn btn--tertiary"
           >
-            <div class="form-group">
-              <label for="amount">Amount</label>
-              <div class="input-with-icon">
-                <input
-                  type="number"
-                  id="amount"
-                  min="0"
-                  name="amount"
-                  step="0.01"
-                  placeholder="0.00"
-                  required
-                />
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M5 13.333a3.333 3.333 0 0 0 3.333 3.334h3.334a3.333 3.333 0 0 0 0-6.667H8.333a3.333 3.333 0 0 1 0-6.667h3.334A3.333 3.333 0 0 1 15 6.667m-5-5v16.666"/></svg></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="note">Note (optional)</label>
-              <input
-                type="text"
-                id="note"
-                name="note"
-                placeholder="e.g. Monthly savings"
-              />
-            </div>
-            <button class="btn btn--primary">Add funds</button>
-          </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#898a8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="m12.5 15-5-5 5-5"/></svg> Back
+          </a>
+          <div class="right">
+            <button class="btn btn--tertiary light-text">Edit goal</button>
+            <button class="btn btn--tertiary red-text">Delete goal</button>
+          </div>
         </div>
-      </div>
-      <div class="deposit-history">
-        <div class="row">
-          <h3>Deposit history</h3>
-          <p class="light-text small-text">
-            10 deposits
+        <h1>Emergency Fund</h1>
+        <div class="details">
+          <p class="light-text">
+            
+              No deadline
+            
+          </p>
+          <div class="divider-dot"></div>
+
+          <p class="light-text">
+            
+              Created Jun 1, 2025
+            
           </p>
         </div>
-        <div class="divider"></div>
-        <ul class="deposit-list">
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text">Starting fresh</p>
-                <p class="light-text small-text">
-                  Jun 1, 2025
-                </p>
-              </div>
-
-              <p class="accent-text">
-                +$500
+      </div>
+      <div class="goal-detail__main-content">
+        <div class="card-container">
+          <div class="card">
+            <div class="row">
+              <p class="large-text primary-text">80%</p>
+              
+              <p class="light-text">
+                $1,000 remaining
               </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Jul 1, 2025
-                </p>
+            </div>
+            <div class="progress-bar">
+              <div
+                class="progress-bar__completion "
+                style="width: 80%;"
+              ></div>
+            </div>
+            <div class="row">
+              <div class="column">
+                <p class="small-text">$4,000</p>
+                <p class="light-text  small-text">Saved so far</p>
               </div>
-
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Aug 1, 2025
+              <div class="column">
+                <p class="small-text">
+                  of $5,000
                 </p>
+                <p class="light-text small-text align-right">Target</p>
               </div>
+            </div>
+          </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text">Smaller month</p>
-                <p class="light-text small-text">
-                  Sep 1, 2025
+          <div class="card">
+            <h3>Add deposit</h3>
+            <form
+              action=""
+              id="add-deposit"
+            >
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <div class="input-with-icon">
+                  <input
+                    type="number"
+                    id="amount"
+                    min="0"
+                    name="amount"
+                    step="0.01"
+                    placeholder="0.00"
+                    required
+                  />
+                  <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M5 13.333a3.333 3.333 0 0 0 3.333 3.334h3.334a3.333 3.333 0 0 0 0-6.667H8.333a3.333 3.333 0 0 1 0-6.667h3.334A3.333 3.333 0 0 1 15 6.667m-5-5v16.666"/></svg></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="note">Note (optional)</label>
+                <input
+                  type="text"
+                  id="note"
+                  name="note"
+                  placeholder="e.g. Monthly savings"
+                />
+              </div>
+              <button class="btn btn--primary">Add funds</button>
+            </form>
+          </div>
+        </div>
+        <div class="deposit-history">
+          <div class="row">
+            <h3>Deposit history</h3>
+            <p class="light-text small-text">
+              10 deposits
+            </p>
+          </div>
+          <div class="divider"></div>
+          <ul class="deposit-list">
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text">Starting fresh</p>
+                  <p class="light-text small-text">
+                    Jun 1, 2025
+                  </p>
+                </div>
+
+                <p class="accent-text">
+                  +$500
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Jul 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$350
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Oct 1, 2025
+                <p class="accent-text">
+                  +$400
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Aug 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Nov 1, 2025
+                <p class="accent-text">
+                  +$400
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text">Smaller month</p>
+                  <p class="light-text small-text">
+                    Sep 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Dec 1, 2025
+                <p class="accent-text">
+                  +$350
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Oct 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text">Post-holiday tight month</p>
-                <p class="light-text small-text">
-                  Jan 1, 2026
+                <p class="accent-text">
+                  +$400
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Nov 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$350
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Feb 1, 2026
+                <p class="accent-text">
+                  +$400
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Dec 1, 2025
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-            <li class="deposit-list__item row">
-              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
-              <div class="details column">
-                <p class="small-text"></p>
-                <p class="light-text small-text">
-                  Mar 1, 2026
+                <p class="accent-text">
+                  +$400
                 </p>
-              </div>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text">Post-holiday tight month</p>
+                  <p class="light-text small-text">
+                    Jan 1, 2026
+                  </p>
+                </div>
 
-              <p class="accent-text">
-                +$400
-              </p>
-            </li>
-          
-        </ul>
+                <p class="accent-text">
+                  +$350
+                </p>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Feb 1, 2026
+                  </p>
+                </div>
+
+                <p class="accent-text">
+                  +$400
+                </p>
+              </li>
+            
+              <li class="deposit-list__item row">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" d="M10 4.167v11.666m0 0L15.833 10M10 15.833 4.167 10"/></svg></div>
+                <div class="details column">
+                  <p class="small-text"></p>
+                  <p class="light-text small-text">
+                    Mar 1, 2026
+                  </p>
+                </div>
+
+                <p class="accent-text">
+                  +$400
+                </p>
+              </li>
+            
+          </ul>
+        </div>
       </div>
     </div>
   </section>

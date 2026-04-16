@@ -417,7 +417,7 @@ main {
 }
 
 .hero > .container .chart {
-  height: 100%;
+  min-height: 200px;
   width: 100%;
 }
 .hero > .container .chart #chart {
@@ -433,6 +433,14 @@ main {
   flex: 1;
 }
 
+.goal-detail .container {
+  display: grid;
+  gap: 32px;
+}
+.goal-detail__top {
+  display: grid;
+  gap: 10px;
+}
 .goal-detail .actions a {
   padding-inline: 0;
   text-decoration: none;
@@ -443,9 +451,6 @@ main {
 }
 .goal-detail .actions a:hover svg * {
   stroke: var(--primary-color);
-}
-.goal-detail .deposit-history {
-  margin: 32px 0;
 }
 .goal-detail .deposit-list__item {
   align-items: center;
@@ -471,6 +476,11 @@ main {
 }
 .goal-detail .deposit-list__item .details {
   flex: 1;
+}
+.goal-detail__main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 label {
