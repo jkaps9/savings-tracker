@@ -47,7 +47,7 @@
             </div>
             <div class="progress-bar">
               <div
-                class="progress-bar__completion {% if percentage >=100 %}progress-bar__completion--complete{% endif %}"
+                class="progress-bar__completion"
                 style="width: {{ percentage }}%;"
               ></div>
             </div>
@@ -65,39 +65,41 @@
             </div>
           </div>
 
-          <div class="card">
-            <h3>Add deposit</h3>
-            <form
-              action=""
-              id="add-deposit"
-            >
-              <div class="form-group">
-                <label for="amount">Amount</label>
-                <div class="input-with-icon">
-                  <input
-                    type="number"
-                    id="amount"
-                    min="0"
-                    name="amount"
-                    step="0.01"
-                    placeholder="0.00"
-                    required
-                  />
-                  <div class="icon">{% include "svgs/icon-dollar.svg" %}</div>
+          {% if percentage < 100 %}
+            <div class="card">
+              <h3>Add deposit</h3>
+              <form
+                action=""
+                id="add-deposit"
+              >
+                <div class="form-group">
+                  <label for="amount">Amount</label>
+                  <div class="input-with-icon">
+                    <input
+                      type="number"
+                      id="amount"
+                      min="0"
+                      name="amount"
+                      step="0.01"
+                      placeholder="0.00"
+                      required
+                    />
+                    <div class="icon">{% include "svgs/icon-dollar.svg" %}</div>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="note">Note (optional)</label>
-                <input
-                  type="text"
-                  id="note"
-                  name="note"
-                  placeholder="e.g. Monthly savings"
-                />
-              </div>
-              <button class="btn btn--primary">Add funds</button>
-            </form>
-          </div>
+                <div class="form-group">
+                  <label for="note">Note (optional)</label>
+                  <input
+                    type="text"
+                    id="note"
+                    name="note"
+                    placeholder="e.g. Monthly savings"
+                  />
+                </div>
+                <button class="btn btn--primary">Add funds</button>
+              </form>
+            </div>
+          {% endif %}
         </div>
         <div class="deposit-history">
           <div class="row">

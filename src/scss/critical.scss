@@ -264,5 +264,9 @@ form {
     .card-container {
       flex: 1;
     }
+
+    .deposit-history {
+      min-width: min(35vw, 400px);
+    }
   }
 }
