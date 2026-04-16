@@ -4,34 +4,36 @@
   {% set percentage = (100 * total / goal.target) | round %}
   <section class="goal-detail">
     <div class="container">
-      <div class="actions row">
-        <a
-          href="/"
-          class="btn btn--tertiary"
-        >
-          {% include "svgs/icon-chevron-left.svg" %} Back
-        </a>
-        <div class="right">
-          <button class="btn btn--tertiary light-text">Edit goal</button>
-          <button class="btn btn--tertiary red-text">Delete goal</button>
+      <div class="goal-detail__top">
+        <div class="actions row">
+          <a
+            href="/"
+            class="btn btn--tertiary"
+          >
+            {% include "svgs/icon-chevron-left.svg" %} Back
+          </a>
+          <div class="right">
+            <button class="btn btn--tertiary light-text">Edit goal</button>
+            <button class="btn btn--tertiary red-text">Delete goal</button>
+          </div>
         </div>
-      </div>
-      <h1>{{ goal.name }}</h1>
-      <div class="details">
-        <p class="light-text">
-          {% if goal.deadline %}
-            Due {{ goal.deadline | dueDate }}
-          {% else %}
-            No deadline
-          {% endif %}
-        </p>
-        <div class="divider-dot"></div>
+        <h1>{{ goal.name }}</h1>
+        <div class="details">
+          <p class="light-text">
+            {% if goal.deadline %}
+              Due {{ goal.deadline | dueDate }}
+            {% else %}
+              No deadline
+            {% endif %}
+          </p>
+          <div class="divider-dot"></div>
 
-        <p class="light-text">
-          {% if goal.createdAt %}
-            Created {{ goal.createdAt | readableDate }}
-          {% endif %}
-        </p>
+          <p class="light-text">
+            {% if goal.createdAt %}
+              Created {{ goal.createdAt | readableDate }}
+            {% endif %}
+          </p>
+        </div>
       </div>
       <div class="goal-detail__main-content">
         <div class="card-container">

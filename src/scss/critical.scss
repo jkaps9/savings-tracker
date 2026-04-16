@@ -83,6 +83,14 @@ main {
 }
 
 .goal-detail {
+  .container {
+    display: grid;
+    gap: variables.$spacing-400;
+  }
+  &__top {
+    display: grid;
+    gap: variables.$spacing-125;
+  }
   .actions {
     a {
       padding-inline: 0;
