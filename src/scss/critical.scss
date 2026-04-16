@@ -61,7 +61,7 @@ main {
 
 .hero > .container {
   .chart {
-    height: 100%;
+    min-height: 200px;
     width: 100%;
 
     #chart {
