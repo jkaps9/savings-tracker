@@ -401,6 +401,14 @@ h4 {
   line-height: 1.4;
 }
 
+p {
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+}
+
 header {
   padding: 16px 0;
 }
@@ -481,6 +489,37 @@ main {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+.goal-detail .bg-gradient {
+  padding: 40px 16px;
+}
+.goal-detail .checkmark {
+  align-items: center;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  min-width: 4rem;
+}
+.goal-detail .goal-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.goal-detail .goal-stats {
+  display: flex;
+  gap: 20px;
+}
+.goal-detail .goal-stats__detail {
+  display: flex;
+  flex-direction: column;
+}
+.goal-detail .goal-stats .vertical-divider {
+  background: rgba(255, 255, 255, 0.3);
+  width: 1px;
 }
 
 label {
@@ -578,6 +617,9 @@ form {
   }
   .goals > .container > .card-container .card:nth-child(8) {
     grid-area: eight;
+  }
+  .goal-detail .bg-gradient {
+    padding: 48px 24px;
   }
 }
 @media (min-width: 64rem) {
