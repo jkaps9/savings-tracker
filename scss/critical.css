@@ -594,4 +594,7 @@ form {
   .goal-detail .card-container {
     flex: 1;
   }
+  .goal-detail .deposit-history {
+    min-width: min(35vw, 400px);
+  }
 }
