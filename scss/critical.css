@@ -588,4 +588,10 @@ form {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "one one two" "three four two" "five six six" "five seven eight";
   }
+  .goal-detail__main-content {
+    flex-direction: row;
+  }
+  .goal-detail .card-container {
+    flex: 1;
+  }
 }
