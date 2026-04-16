@@ -38,7 +38,7 @@
       </div>
       <div class="goal-detail__main-content">
         <div class="card-container">
-          <div class="card">
+          <div class="card {% if percentage >= 100 %}bg-gradient{% endif %}">
             {% if percentage < 100 %}
               <div class="row">
                 <p class="large-text primary-text">{{ percentage }}%</p>
@@ -62,6 +62,30 @@
                     of ${{ goal.target | amountWithDecimals }}
                   </p>
                   <p class="light-text small-text align-right">Target</p>
+                </div>
+              </div>
+            {% else %}
+              <div class="checkmark">
+                {% include "svgs/icon-checkmark.svg" %}
+              </div>
+              <div class="goal-summary">
+                <p class="large-text">100%</p>
+                <h2>Goal Complete</h2>
+                <p>
+                  You saved ${{ goal.target | amountWithDecimals(2) }} across
+                  {{ goal.deposits | length }} deposits. Finished before your
+                  {{ goal.deadline | dueDate }} deadline.
+                </p>
+              </div>
+              <div class="goal-stats">
+                <div class="goal-stats__detail">
+                  <h2>{{ goal.deposits | length }}</h2>
+                  <p>DEPOSITS</p>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="goal-stats__detail">
+                  <h2>${{ goal.target | amountWithDecimals(2) }}</h2>
+                  <p>TOTAL SAVED</p>
                 </div>
               </div>
             {% endif %}
