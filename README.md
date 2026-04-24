@@ -67,7 +67,7 @@ Users should be able to:
 
 <img src="./screenshot.png" alt="Home page screenshot" width="500"/>
 
-<img src="./screenshot_details.png" alt="Details screenshot" width="500"/>
+<img src="./screenshot-details.png" alt="Details screenshot" width="500"/>
 
 ### Links
 
